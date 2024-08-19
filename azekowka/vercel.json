@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "azekowka/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "azekowka/wsgi.py"
+    }
+  ]
+}
