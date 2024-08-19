@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.user-info {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.user-info p {
+    margin: 5px 0;
+    color: #bbb;
+}
+
+.btn {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-edit {
+    margin-top: 10px;
+}
+
+.btn-settings, .btn-logout {
+    margin-left: 20px;
+}
+
+.stats-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.courses-section h2 {
+    margin-bottom: 20px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.course-card p {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: #28a745;
+    height: 8px;
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .user-info {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .stats-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}

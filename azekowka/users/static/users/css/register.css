@@ -1,0 +1,73 @@
+form{
+    margin: auto;
+    height: 30rem;
+    width: 30rem;
+    background-color: #f6f9ff;;
+    box-shadow:0px 0 25px rgba(1, 41, 112, 0.1) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    border-radius: 1.5rem;
+    flex: 1;
+}
+#name,#phone,#pass{
+    height: 2.5rem;
+    width: 14rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow:0px 0 35px rgba(1, 41, 112, 0.1) ;
+    outline: none;
+}
+.circle::before,.circle::after{
+    margin-top: 0.5rem;
+    position:absolute;
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    right: 34%;
+    background-color: rgb(29, 130, 232);
+}
+
+.circle::before{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(29, 130, 232);
+}
+.circle::after{
+    width: 1.5rem;
+    height: 1.5rem;
+    animation: pulse 1s linear infinite;
+}
+@keyframes pulse{
+    from{
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+.error{
+    color: red;
+}
+#frontname,#Phone,#password1,#password2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn1{
+    padding: 0.5rem 1rem;
+    background-color:rgb(29, 130, 232);
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    box-shadow:0px 0 35px rgba(1, 41, 112, 0.1) ;
+}
+
+.helptext {
+    display: none;
+}

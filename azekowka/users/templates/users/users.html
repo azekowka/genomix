@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Laboratory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'main/img/logo_white_icon.svg' %}" />
+    <link rel="stylesheet" href="{% static 'users/css/users.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Personal Laboratory</h1>
+        </div>
+
+        <div class="profile-section">
+            <img src="user-avatar.png" alt="User Avatar" class="profile-pic">
+            <div class="user-info">
+                <h2>{{ user }}</h2>
+                <p>johndoe@example.com</p>
+                <button class="btn btn-edit">Edit Profile</button>
+            </div>
+            <button class="btn btn-settings">Settings</button>
+            {% if user.is_authenticated %}
+                <form action="{% url 'logout' %}" method="POST" style="text-align: right;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-logout">Log Out</button>
+                </form>
+            {% endif %}
+        </div>
+
+        <div class="stats-section">
+            <p>Lessons Completed: 12</p>
+            <p>Subscription Status: Active</p>
+        </div>
+
+        <div class="courses-section">
+            <h2>My Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <img src="biology.png" alt="Course Image">
+                    <h3>Experimental Biology</h3>
+                    <p>Explore the fundamentals of biological experimentation and research techniques.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                    <p>Completion: 75%</p>
+                </div>
+
+                <div class="course-card">
+                    <img src="biology.png" alt="Course Image">
+                    <h3>Biology for High Schoolers</h3>
+                    <p>An engaging course designed to make biology fun and accessible for high school students.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                    <p>Completion: 50%</p>
+                </div>
+
+                <div class="course-card">
+                    <img src="genetics.png" alt="Course Image">
+                    <h3>Advanced Genetics</h3>
+                    <p>Dive deep into genetic engineering, CRISPR technology, and ethical implications.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%;"></div>
+                    </div>
+                    <p>Completion: 30%</p>
+                </div>
+
+                <div class="course-card">
+                    <img src="microbiology.png" alt="Course Image">
+                    <h3>Microbiology Basics</h3>
+                    <p>Understand the world of microorganisms and their impact on human life.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <p>Completion: 90%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
