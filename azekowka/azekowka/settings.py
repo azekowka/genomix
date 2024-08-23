@@ -87,13 +87,20 @@ WSGI_APPLICATION = 'azekowka.wsgi.application'
 #        'NAME': BASE_DIR / 'db.sqlite3',}}
 
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': os.getenv('railway'),
+       'USER': os.getenv('postgres'),
+       'PASSWORD': os.getenv('YOmXCIuhvQKzhdrUgBsijpmFrPknsGZQ'),
+       'HOST': os.getenv('postgres.railway.internal'),
+       'PORT': os.getenv('5432'),
+   }
 }
+
 
 
 # Password validation
