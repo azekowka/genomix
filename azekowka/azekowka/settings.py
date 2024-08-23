@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-tfi95%nfu(fzk_&7=mssb%!6o4h3z_p0v-hgq(479-!n*bx1ab
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh"]
+ALLOWED_HOSTS = ["127.0.0.1", ".pythonanywhere.com"]
 
 
 AUTH_USER_MODEL = 'users.User'
@@ -81,25 +81,11 @@ WSGI_APPLICATION = 'azekowka.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',}}
-
-import os
-from dotenv import load_dotenv
-load_dotenv()
-
 DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': os.getenv('railway'),
-       'USER': os.getenv('postgres'),
-       'PASSWORD': os.getenv('YOmXCIuhvQKzhdrUgBsijpmFrPknsGZQ'),
-       'HOST': os.getenv('postgres.railway.internal'),
-       'PORT': os.getenv('5432'),
-   }
-}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',}}
+
 
 
 
