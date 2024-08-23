@@ -10,7 +10,7 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "staticfiles_build"
+        "distDir": "static"
       }
     }
   ],
@@ -23,5 +23,6 @@
       "src": "/(.*)",
       "dest": "azekowka/wsgi.py"
     }
-  ]
+  ],
+    "outputDirectory": "ui/staticfiles"
 }

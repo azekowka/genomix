@@ -25,5 +25,7 @@ urlpatterns = [
     path('', include('main.urls')),
     path('news/', include('news.urls')),
     path('users/', include('users.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
